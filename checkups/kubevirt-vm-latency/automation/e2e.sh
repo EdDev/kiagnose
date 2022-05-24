@@ -211,7 +211,7 @@ spec:
               value: ${VM_LATENCY_CONFIGMAP}
 EOF
 
-    ${KUBECTL} wait --for=condition=complete --timeout=10m job.batch/${KIAGNOSE_JOB} -n ${KIAGNOSE_NAMESPACE}
+    ${KUBECTL} wait --for=condition=complete --timeout=15m job.batch/${KIAGNOSE_JOB} -n ${KIAGNOSE_NAMESPACE}
 
     echo
     echo "Result:"
